@@ -8,6 +8,17 @@
 
 ## Install
 
+**Pre-built binaries** (no Rust required) — download from [GitHub Releases](https://github.com/rinfimate/ariel-rs-cli/releases):
+
+| Platform | File |
+|----------|------|
+| Linux x86_64 | `arielc-linux-x86_64.tar.gz` |
+| macOS Intel | `arielc-macos-x86_64.tar.gz` |
+| macOS Apple Silicon | `arielc-macos-arm64.tar.gz` |
+| Windows x86_64 | `arielc-windows-x86_64.zip` |
+
+**Via Cargo:**
+
 ```sh
 cargo install ariel-rs-cli
 ```
