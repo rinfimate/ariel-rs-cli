@@ -1,0 +1,21 @@
+[package]
+name = "ariel-rs-cli"
+version = "0.1.0"
+edition = "2021"
+description = "Fast Mermaid diagram CLI — arielc is a drop-in replacement for mmdc"
+license = "MIT"
+authors = ["Rochanglien Infimate"]
+repository = "https://github.com/rinfimate/ariel-rs-cli"
+homepage = "https://github.com/rinfimate/ariel-rs-cli"
+documentation = "https://docs.rs/ariel-rs-cli"
+keywords = ["mermaid", "diagram", "svg", "cli", "mmdc"]
+categories = ["command-line-utilities", "visualization"]
+readme = "README.md"
+
+[[bin]]
+name = "arielc"
+path = "src/main.rs"
+
+[dependencies]
+ariel-rs = "0.1.0"
+clap = { version = "4", features = ["derive"] }
