@@ -80,6 +80,8 @@ jobs:
     name: Release binaries
     if: github.event_name == 'release' && github.event.action == 'published'
     needs: [test, lint, fmt]
+    permissions:
+      contents: write
     strategy:
       matrix:
         include:
