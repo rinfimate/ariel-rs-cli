@@ -53,9 +53,10 @@ fn main() {
     // Read input
     let input = if args.input.to_str() == Some("-") {
         let mut buf = String::new();
-        io::stdin()
-            .read_to_string(&mut buf)
-            .unwrap_or_else(|e| { eprintln!("arielc: failed to read stdin: {e}"); process::exit(1); });
+        io::stdin().read_to_string(&mut buf).unwrap_or_else(|e| {
+            eprintln!("arielc: failed to read stdin: {e}");
+            process::exit(1);
+        });
         buf
     } else {
         fs::read_to_string(&args.input).unwrap_or_else(|e| {
@@ -70,9 +71,10 @@ fn main() {
 
     // Write output
     if args.output.to_str() == Some("-") {
-        io::stdout()
-            .write_all(svg.as_bytes())
-            .unwrap_or_else(|e| { eprintln!("arielc: write error: {e}"); process::exit(1); });
+        io::stdout().write_all(svg.as_bytes()).unwrap_or_else(|e| {
+            eprintln!("arielc: write error: {e}");
+            process::exit(1);
+        });
     } else {
         fs::write(&args.output, &svg).unwrap_or_else(|e| {
             eprintln!("arielc: cannot write '{}': {e}", args.output.display());
