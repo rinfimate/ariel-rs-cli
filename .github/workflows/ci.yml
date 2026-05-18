@@ -30,14 +30,8 @@ jobs:
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
-      - name: Build
-        run: cargo build --release
-
-      - name: Smoke test
-        run: |
-          echo 'flowchart TD\n  A --> B' > test.mmd
-          ./target/release/arielc -i test.mmd -o test.svg
-          grep -q '<svg' test.svg && echo "OK" || exit 1
+      - name: Test
+        run: cargo test
 
   lint:
     name: Lint
