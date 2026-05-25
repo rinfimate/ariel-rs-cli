@@ -58,7 +58,7 @@ Flags not applicable to arielc (no Puppeteer, no browser):
 
 ## Supported diagram types
 
-All 29 diagram types supported by [ariel-rs](https://crates.io/crates/ariel-rs).
+All 28 diagram types supported by [ariel-rs](https://crates.io/crates/ariel-rs).
 
 ## License
 
